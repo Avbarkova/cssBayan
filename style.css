@@ -5,7 +5,7 @@
 }
 html {
     scroll-behavior: smooth;
-    font-size: 40px;
+    font-size: 25px;
 }
 body {
     display: flex;
@@ -17,7 +17,7 @@ body {
     font-family: 'Roboto Serif', serif;
 }   
 .container {
-    max-width: 80%; 
+    max-width: 75%; 
     margin: 0 auto;
     height: 100%;
     display: flex;
@@ -28,14 +28,13 @@ main {
     font-size: 1rem;
     background-color: #efe1e1;
 }
-main:hover label {color: black;}
 header {
     width: 100%;
     font-style: bold;
     font-weight: 800;
     font-size: 1rem;
     line-height: 2rem;
-    padding: 1% 2%;
+    padding: 1% 0;
     text-align: center;
     border-bottom: 1px solid #717171;
     background-color: #e1c5c5;
@@ -43,6 +42,7 @@ header {
 .acc_content {
     margin: 0 auto;
     height: 0;
+    width: 100%;
     overflow: hidden;
     opacity: 0;
     border-bottom: 1px solid #717171;
@@ -51,27 +51,24 @@ header {
 img {
     display: flex;
     margin: 1% auto;
-    width: 50%;
+    width: 25%;
 }
 label {
     cursor: pointer;
     display: block;
-    padding: 0.5% 5% 0;
     width: 100%;
     z-index: 100;  
     transition: color 0.5s;
     font-size: 1rem;
     line-height: 2rem;
     color:red;
-}
-label:hover {
-    color:red;
+    padding-top: 1%;
 }
 input{
     display: none;
 }
 /*при наведении на тело меняется цвет и появляются стрелочки*/
-main:hover label:before {
+.container:hover label:before {
     content: '\276F';
     float: right;
 }
@@ -89,7 +86,7 @@ input:checked + label + .acc_content {
     transition: 1s;
 }
 /*открывается при наведении*/
-input:hover + label {
+.container:hover label {
     color: black;
 }
 input:hover + label:before {
@@ -107,6 +104,7 @@ footer {
     padding: 1%;
     text-align: center;
     background-color: #e1c5c5;
+    font-size: 1rem;
 }
 a {
     text-decoration: none;
@@ -116,19 +114,19 @@ a {
 /*Медиа на 1440*/
 @media screen and (max-width: 1440px) {
     html {
-        font-size: 30px;
+        font-size: 20px;
     }
 }
 /*Медиа на 820*/
 @media screen and (max-width: 820px) {
     html {
-        font-size: 20px;
+        font-size: 15px;
     }
 }
 /*Медиа на 400*/
 @media screen and (max-width: 400px) {
     html {
-        font-size: 15px;
+        font-size: 12px;
     }
 }
 /*Медиа на 320*/
