@@ -20,6 +20,8 @@ body {
     display: flex;
     flex-direction: column;
 }
+main:hover label {color: black;}
+
 header {
     width: 100%;
     font-style: bold;
@@ -47,29 +49,41 @@ label {
     padding: 10px 20px 0px;
     width: 100%;
     z-index: 100;  
-    transition: color 1.5s;
+    transition: color 0.5s;
     font-size: 20px;
     line-height: 45px;
-    color: black;
+    color:red;
 }
 label:hover {
-    color: black;
+    color:red;
 }
 input{
     display: none;
 }
-label:before {
+main:hover label:before {
     content: '\276F';
     float: right;
 }
 input:checked + label {
-    color: red;
+    color: black;
 }
 input:checked + label:before {
     transition: transform .35s;
     transform: rotate(90deg);
 }
 input:checked + label + .acc_content {
+    height: auto;
+    opacity: 1;
+    transition: 1s;
+}
+input:hover + label {
+    color: black;
+}
+input:hover + label:before {
+    transition: transform .35s;
+    transform: rotate(90deg);
+}
+input:hover + label + .acc_content {
     height: auto;
     opacity: 1;
     transition: 1s;
